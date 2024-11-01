@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600;700;800&family=Raleway:wght@400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* PAGE FIRST? */
+
+
+.hero {
+    max-height: 400px;
+    height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url('https://preview.colorlib.com/theme/laundry/assets/img/hero/hero2.png');
+    background-repeat: no-repeat;
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    /* Adjust for left-aligned content */
+    color: white;
+    font-weight: bolder;
+    padding: 0 20px;
+}
+
+.content h1 {
+    font-size: 4.5rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-left: 70px;
+    font-family: "Muli",sans-serif;
+    color: white;
+}
+
+/* Medium Screen (Tablets, Landscape Mobile) */
+@media (max-width: 1024px) {
+    .hero {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .content h1 {
+        font-size: 3rem;
+        /* Smaller heading for medium screens */
+    }
+
+}
+
+/* Small Screen (Portrait Mobile) */
+@media (max-width: 768px) {
+    .hero {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+        /* Smaller heading for small screens */
+    }
+
+}
+
+/* Extra Small Screen (Very small mobile devices) */
+@media (max-width: 480px) {
+    .hero {
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        /* Adjust height for small screens */
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+        /* Smaller heading for extra small screens */
+    }
+
+}
+
+/* PAGE-2? */
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .message {
+    width: 75%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    text-align: left; /* Ensure contact info is aligned to the left */
+}
+
+.contact-info ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    justify-content: flex-start; /* Ensure icons and text are fully left-aligned */
+}
+
+.contact-info li i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.contact-info strong {
+    display: block;
+}
+
+/* Medium Screens */
+@media (max-width: 992px) {
+    .container {
+        padding: 30px;
+    }
+    
+    .contact-form .message {
+        width: 100%; /* Make textarea take full width */
+    }
+    
+    .contact-form .input-group {
+        flex-direction: column; /* Stack inputs vertically */
+    }
+}
+
+/* Small Screens */
+@media (max-width: 576px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        align-items: flex-start; /* Ensure container aligns its contents to the left */
+        margin-left: 0;
+    }
+    
+    .contact-form {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .contact-info {
+        width: 100%;
+        text-align: left; /* Ensure contact info aligns fully left */
+        padding: 0;
+        margin-left: 0; /* Ensure no unintended margin or padding on small screens */
+    }
+    
+    .contact-info ul {
+        padding-left: 0;
+        margin-left: 0; /* Remove any left padding/margins */
+        width: 100%;
+    }
+
+    .contact-info li {
+        justify-content: flex-start; /* Align icons and text to the left */
+        text-align: left; /* Align text inside the list item */
+        margin-left: 0; /* Remove margin on small screens */
+        padding-left: 0; /* Ensure there's no padding on the left side */
+    }
+
+    .contact-info li i {
+        margin-right: 10px; /* Reduce margin between icon and text */
+    }
+
+    .contact-form .message {
+        width: 100%; /* Full width on small screens */
+        height: 120px; /* Reduce height slightly */
+    }
+    
+    .contact-form .input-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .contact-form input {
+        width: 100%; /* Ensure inputs take up full width on small screens */
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+}
+
+/* FOOTER? */
+.footer {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    color: #333;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    font-family:"Raleway",
+    sans-serif;
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 2;
+    color: #555;
+    font-family:"Raleway",
+    sans-serif;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-family:"Raleway",
+    sans-serif;
+}
+
+.footer-section .socials {
+    margin-top: 50px;
+}
+
+.footer-section .socials a {
+    font-size: 20px;
+    margin-right: 20px;
+    color: #007bff;
+    
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 120px;
+    font-size: 15px;
+    color: #555;
+    font-family:"Raleway",
+    sans-serif;
+}
+
+.footer-bottom span {
+    color: red;
+}
+
+.footer-section.contact p i {
+    margin-right: 10px;
+}
+
+/* Responsive for tablets and smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* Additional responsive styling for small screens (below 480px) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 10px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+    .footer-section {
+        flex: 100%;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+    .footer-section h2, .footer-section h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .footer-section p, .footer-section ul li {
+        font-size: 12px;
+    }
+    .footer-section .socials a {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    .footer-bottom {
+        margin-top: 80px;
+        font-size: 13px;
+    }
+    .footer-bottom span {
+        font-size: 13px;
+    }
+}
+
+
